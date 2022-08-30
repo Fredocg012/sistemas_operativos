@@ -1,3 +1,4 @@
+// Este programa crea un proceso, no se puede visualizar en la salida
 #include <sys/types.h>
 #include <unistd.h>    // Para que reconozca fork()
 
