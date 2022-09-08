@@ -1,5 +1,8 @@
-// Crear un proceso padre con dos procesos hijos
+/*
+    Correa González Alfredo
+    Crear un proceso padre con dos procesos hijos
 
+*/
 #include <stdio.h>
 #include <sys/types.h>
 #include <unistd.h>

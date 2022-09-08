@@ -1,4 +1,7 @@
-// Crea un proceso
+/* 
+    Correa González Alfredo
+    Crea un proceso
+*/
 #include <sys/types.h>
 #include <unistd.h>
 #include <stdio.h>
