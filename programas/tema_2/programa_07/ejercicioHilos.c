@@ -30,7 +30,7 @@ void *codigo_hilo1(void *num_hilo)  // Esta función solo puede tener un argumen
     pthread_exit(NULL);
 }
 
-void *codigo_hilo2(void *num_hilo)  // Esta función solo puede tener un argumento.
+void *codigo_hilo2(void *num_hilo2)  // Esta función solo puede tener un argumento.
 {
     int i; 
     max = vector[0];
@@ -43,7 +43,7 @@ void *codigo_hilo2(void *num_hilo)  // Esta función solo puede tener un argumen
 
     }
 
-    printf("El valor recibido en el argumento es: %d \n", *(int *)num_hilo); // Apuntador a entero
+    printf("El valor recibido en el argumento es: %d \n", *(int *)num_hilo2); // Apuntador a entero
     pthread_exit(NULL);
 }
 
@@ -51,16 +51,20 @@ void *codigo_hilo2(void *num_hilo)  // Esta función solo puede tener un argumen
 int main()
 {
     pthread_t hilo1, hilo2;     //Variables de tipo hilo
-    int i, error, valorHilo;
+    int i, error, valorHilo, valorHilo2;
 
     for(i = 0; i < 100; i++)
     {
-        vector[i] = rand()%1001;
+        vector[i] = rand()%1000001;
     }
+    
+   
+    
 
    
 
-    valorHilo = 1;
+    valorHilo;
+    
     error = pthread_create(&hilo1, NULL, codigo_hilo1, &valorHilo );  //(hilo, variables, función a ejecutar, argumento de la función a ejecutar)
     error = pthread_create(&hilo2, NULL, codigo_hilo2, &valorHilo );
     error = pthread_join(hilo1,NULL);   // Equivalente al wait  
